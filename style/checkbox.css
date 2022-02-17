@@ -1,0 +1,68 @@
+/*CHECKBOX*/
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 400ms ease-in-out 0s;
+}
+.checkbox .trace {
+  width: 50px;
+  height: 4px;
+  background-color: #966B9D;
+  position: absolute;
+  border-radius: 10px;
+  transition: 0.6s ease-in-out;
+}
+.checkbox .trace:nth-child(1) {
+  top: 26px;
+  transform: rotate(0);
+}
+.checkbox .trace:nth-child(2) {
+  top: 46px;
+  transform: rotate(0);
+}
+.checkbox .trace:nth-child(3) {
+  top: 66px;
+  transform: rotate(0);
+}
+
+/*TOGGLE EFFECTS*/
+#toggle {
+  display: none;
+}
+#toggle:checked + .checkbox .trace:nth-child(1) {
+  transform: rotate(45deg);
+  top: 48px;
+}
+#toggle:checked + .checkbox .trace:nth-child(2) {
+  transform: translate(-50px);
+  width: 40px;
+  visibility: hidden;
+  opacity: 0;
+}
+#toggle:checked + .checkbox .trace:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 48px;
+}
+#toggle:checked + .checkbox {
+  background-color: #C3F3C0 400ms;
+}
+#toggle:checked ~ .menu {
+  box-shadow: 0px 0px 0px 100vmax #C3F3C0;
+  z-index: 1;
+}
+#toggle:checked ~ .menu-items {
+  visibility: visible;
+  opacity: 1;
+}
