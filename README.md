@@ -8,5 +8,5 @@
 </br><p align="center">In progress... :hourglass_flowing_sand:</p>
 
 <h3 align="center">
-  <a href="https://larissasmartins.github.io/larissas-portfolio/">Click here to check it out!</a>
+  <a href="https://larissas-portfolio.vercel.app/">Click here to check it out!</a>
 </h3></br>
