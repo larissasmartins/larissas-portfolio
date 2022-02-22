@@ -7,7 +7,7 @@ body {
   color: #C3F3C0;
 }
 
-/*HEADER*/
+
 .header-container {
   height: 100vh;
   width: 100%;
@@ -34,7 +34,7 @@ h2 {
   letter-spacing: 4px;
 }
 
-/*HOVER SOCIAL MEDIAS*/
+
 .social-medias {
   margin-top: 1rem;
   display: flex;
@@ -55,11 +55,11 @@ h2 {
   background: linear-gradient(#C3F3C0, #ffffff);
 }
 
-/*MENU CHECKBOX*/
+
 .menu {
   position: absolute;
   top: 28px;
-  right: 5px;
+  right: -15px;
   width: 5px;
   background-color: transparent;
   height: 2px;
@@ -99,7 +99,11 @@ h2 {
   transition-duration: 400ms;
 }
 
-/*CARDS*/
+.menu:hover {
+  visibility: hidden;
+}
+
+
 .container {
   height: auto;
   width: 100%;
@@ -123,7 +127,6 @@ h2 {
   align-items: center;
   justify-content: center;
   background-color: #462255;
-  background-image: url("../images/background.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -163,29 +166,33 @@ h2 {
   letter-spacing: 4px;
   margin: 0;
 }
-.card-wrapper p {
+.card-wrapper a {
   font-size: 0;
   visibility: visible;
   opacity: 0;
+  position: relative;
+  color:#462255;
+  text-decoration: none;
   font-weight: bold;
-  text-transform: uppercase;
   transition: 0.5s ease-in-out;
 }
+
 .card:hover {
   filter: unset;
 }
+
 .card:hover > .card-wrapper::before {
   height: 250px;
   width: 250px;
   opacity: 1;
 }
-.card:hover > .card-wrapper p {
+.card:hover > .card-wrapper a {
   opacity: 1;
   visibility: visible;
+  position: relative;
   font-size: 14px;
 }
 
-/*FOOTER*/
 .footer {
   width: 100%;
   height: 100px;
